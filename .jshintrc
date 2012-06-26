@@ -1,6 +1,8 @@
 {
     "predef": [
-        "jasmine",
+        "sinon",
+        "request",
+        "_",
         "spyOn",
         "it",
         "console",
