@@ -32,7 +32,7 @@ You can alter globals for testing in the file ```test/common.js```
 
 JSHint
 ------
-JSHint is set up to verify all the JavaScript files in the folder ```lib```.
+JSHint is set up to verify all the JavaScript files in the foldes ```lib``` and ```test```.
 You can specify what JSHint options to use in the file ```.jshintrc```
 
 Running tests
