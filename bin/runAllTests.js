@@ -1,14 +1,13 @@
 "use strict";
 var spawn = require('child_process').spawn;
-runJsHint("./lib", function (err) {
-	runJsHint("./test", function (err2) {
-		if (err || err2) {
-			console.error("Exiting because of jsHint errors");
-			return process.exit(1);
-		}
-		console.log("No JSHint errors detected");
-		return runMocha();
-	});
+
+runJsHint(["./lib", "./test"], function (err) {
+	if (err) {
+		console.error("Exiting because of jsHint errors");
+		return process.exit(1);
+	}
+	console.log("No JSHint errors detected");
+	return runMocha();
 });
 
 function runMocha() {
@@ -22,7 +21,24 @@ function runMocha() {
 	require('../node_modules/mocha/bin/_mocha');
 }
 
-function runJsHint(path, callback) {
+function runJsHint(pathsArray, callback) {
+	var pathsRun = 0, error = null, numberOfPaths = pathsArray.length;
+	//start off all jsHints in parallel
+	for (var i = 0; i < numberOfPaths; i++) {
+		runJsHintOnOnePath(pathsArray[i], onePathRun);
+	}
+	return;
+
+	function onePathRun(err) {
+		error = error || err;
+		pathsRun++;
+		if (pathsRun === numberOfPaths) {
+			return callback(error);
+		}
+	}
+}
+
+function runJsHintOnOnePath(path, callback) {
 	var jsHint = spawn("node", ["./node_modules/jshint/bin/hint", path]);
 	var jsHintErrors = false;
 	jsHint.stdout.on("data", function (data) {
