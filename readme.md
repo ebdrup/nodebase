@@ -39,5 +39,5 @@ You can specify what JSHint options to use in the file ```.jshintrc```
 
 Running tests
 -------------
-After you do ```npm install`` you just run the command ```npm test``` to run all tests.
+After you do ```npm install``` you just run the command ```npm test``` to run all tests.
 
