@@ -1,24 +1,26 @@
 "use strict";
 describe("Global variables for testing", function () {
+	var fix;  //this is needed because .to.be.ok is not a function call and JSHint fails on that
+	//they really should mak .ko a function call
 
 	it("has sinon defined", function () {
-		expect(sinon).to.be.ok;
+		fix = expect(sinon).to.be.ok;
 	});
 
 	it("has expect defined", function () {
-		expect(expect).to.be.ok;
+		fix = expect(expect).to.be.ok;
 	});
 
 	it("has injectr defined", function () {
-		expect(injectr).to.be.ok;
+		fix = expect(injectr).to.be.ok;
 	});
 
 	it("has underscore defined", function () {
-		expect(_).to.be.ok;
+		fix = expect(_).to.be.ok;
 	});
 
 	it("has request defined", function () {
-		expect(request).to.be.ok;
+		fix = expect(request).to.be.ok;
 	});
 
 });

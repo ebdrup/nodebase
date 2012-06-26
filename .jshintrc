@@ -3,6 +3,7 @@
         "sinon",
         "request",
         "_",
+        "injectr",
         "spyOn",
         "it",
         "console",
