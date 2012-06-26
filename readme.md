@@ -1,9 +1,11 @@
 nodebase
 ========
+--------
 This is my boilerplate for when I start a new ```node.js``` project. I clone this repository and start from there.
 
-Testing setup
-=============
+Test setup
+==========
+----------
 - ```mocha``` is the test framework
 - ```sinon``` is used for mocks and spies
 - ```chai``` is used for assertions
