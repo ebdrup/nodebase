@@ -12,7 +12,7 @@ Testing setup
 Test files
 ----------
 The project it set up to have tests in the ```test``` folder.
-There is an example test in ```test/units/globals.spec.js```
+There is an example test in ```test/unit/globals.spec.js```
 
 BDD style
 ---------
