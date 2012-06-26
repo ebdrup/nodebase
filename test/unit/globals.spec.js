@@ -1,3 +1,4 @@
+"use strict";
 describe("Global variables for testing", function () {
 
 	it("has sinon defined", function () {
