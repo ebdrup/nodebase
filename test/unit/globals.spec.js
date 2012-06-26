@@ -1,7 +1,7 @@
 "use strict";
 describe("Global variables for testing", function () {
 	var fix;  //this is needed because .to.be.ok is not a function call and JSHint fails on that
-	//they really should mak .ko a function call
+	//they really should mak .ok a function call
 
 	it("has sinon defined", function () {
 		fix = expect(sinon).to.be.ok;
