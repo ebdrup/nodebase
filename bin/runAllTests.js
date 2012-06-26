@@ -1,20 +1,21 @@
 //use strict
 var spawn = require('child_process').spawn;
 var jsHint = spawn("node", ["./node_modules/jshint/bin/hint", "./lib"]);
-var errors = false;
+var jsHintErrors = false;
 jsHint.stdout.on("data", function (data) {
-	console.log('jsHint: ' + data);
+	jsHintErrors = true;
+	console.warn(data.toString());
 });
 jsHint.stderr.on("data", function (data) {
-	console.error('jsHint error: ' + data);
-	errors = true;
+	jsHintErrors = true;
+	console.error('jshint Error: ' + data.toString());
 });
-
 jsHint.on("exit", function () {
-	//use strict
-	if (errors) {
-		process.exit(1);
+	if (jsHintErrors) {
+		console.error("Exiting because of jsHint errors");
+		return process.exit(1);
 	}
+	console.log("No JSHint errors detected");
 	//run mocha
 	var realExit = process.exit;
 	process.exit = function () {
