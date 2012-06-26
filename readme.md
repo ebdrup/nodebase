@@ -1,8 +1,5 @@
 nodebase
 ========
-
-What is this
-============
 This is my boilerplate for when I start a new ```node.js``` project. I clone this repository and start from there.
 
 Testing setup
@@ -19,8 +16,8 @@ There is an example test in ```test/units/globals.spec.js```
 
 BDD style
 ---------
-The tests are set to use BDD-style, and use the dot reporter. These options can be changed in the file
-```test/mocha.opts```
+The tests are set to use BDD-style, and use the dot reporter. These options can be changed in the
+file ```test/mocha.opts```
 
 Global variables when testing
 -----------------------------
