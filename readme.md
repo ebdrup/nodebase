@@ -14,7 +14,9 @@ Test setup
 Test files
 ----------
 The project it set up to have tests in the ```test``` folder.
-There is an example test in ```test/unit/globals.spec.js```
+There is an example test in ```test/unit/globals.spec.js```.
+I usually put my unit tests in ```test/unit``` and my integration tests in ```test/integration```, and create
+other folders in ```test/``` for other classes of tests.
 
 BDD style
 ---------
@@ -39,5 +41,9 @@ You can specify what JSHint options to use in the file ```.jshintrc```
 
 Running tests
 -------------
-After you do ```npm install``` you just run the command ```npm test``` to run all tests.
+After you do ```npm install``` you just run the command
+
+```npm test```
+
+to run all tests.
 
