@@ -60,3 +60,31 @@ to run all tests.
 
 In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.
 
+Running a subset of tests
+-------------------------
+If you want to run a subset of tests, you can modify the file ```tests/mocha.opts``` and add the line
+```
+--grep myTestFilter
+```
+At the top, here is the mocha explanation of ```--grep```
+
+The --grep option when specified will trigger mocha to only run tests matching the given pattern which is internally compiled to a RegExp.
+
+Suppose for example you have “api” related tests, as well as “app” related tests, as shown in the following snippet;
+One could use ```--grep api``` or ```--grep app``` to run one or the other.
+The same goes for any other part of a suite or test-case title, ```--grep users``` would be valid as well,
+or even ```--grep GET```.
+
+```
+describe('api', function(){
+  describe('GET /api/users', function(){
+    it('respond with an array of users')
+  });
+});
+
+describe('app', function(){
+  describe('GET /users', function(){
+    it('respond with an array of users')
+  });
+});
+```
