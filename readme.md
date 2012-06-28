@@ -2,6 +2,12 @@ nodebase
 --------
 This is my boilerplate for when I start a new ```node.js``` project. I clone this repository and start from there.
 
+You put your code in the ```lib``` folder. I recommend an editor that you can configure to run JSHint for you
+while you are editing your JavaScript files. I use WebStorm.
+
+The main advantage of cloning this repository is that it comes with a working test-setup and runs JSHint as well
+as all the tests. This can be a pain to set up if you are new to node.
+
 Test setup
 ----------
 - ```mocha``` is the test framework
@@ -12,7 +18,9 @@ Test setup
 Test files
 ----------
 The project it set up to have tests in the ```test``` folder.
+
 There is an example test in ```test/unit/globals.spec.js```.
+
 I usually put my unit tests in ```test/unit``` and my integration tests in ```test/integration```, and create
 other folders in ```test/``` for other classes of tests.
 
@@ -49,4 +57,6 @@ After you do ```npm install``` you just run the command
 ```npm test```
 
 to run all tests.
+
+In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.
 
