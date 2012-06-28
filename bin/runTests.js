@@ -3,7 +3,7 @@ var spawn = require('child_process').spawn;
 var fs = require("fs");
 var path = require("path");
 
-runJsHint(["./lib", "./test"], function (err) {
+runJsHint(["./lib", "./test", "./bin"], function (err) {
 	if (err) {
 		console.error("Exiting because of jsHint errors");
 		return process.exit(1);
