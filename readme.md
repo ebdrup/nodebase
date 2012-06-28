@@ -34,8 +34,10 @@ You can alter globals for testing in the file ```test/common.js```
 
 JSHint
 ------
-JSHint is set up to verify all the JavaScript files in the foldes ```lib``` and ```test```.
+JSHint is set up to verify all the JavaScript files in the foldes ```lib```. ```bin``` and ```test```.
+You can add more directories in the ```bin/runTests.js``` file.
 You can specify what JSHint options to use in the file ```.jshintrc```
+You can specify specific files or directories for JSHint to ignore in the file ```.jshintignore```
 
 Running tests
 -------------
