@@ -17,7 +17,9 @@ function runMocha() {
 		var args = arguments;
 		//stdout does not flush data output before exiting the process, this compensates
 		process.stdout.once("drain", function (){
-			realExit.apply(process, args);
+			setTimeout(function(){
+				realExit.apply(process, args);
+			}, 500);
 		});
 	};
 	require('../node_modules/mocha/bin/_mocha');

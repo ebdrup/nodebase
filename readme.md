@@ -66,9 +66,9 @@ If you want to run a subset of tests, you can modify the file ```tests/mocha.opt
 ```
 --grep myTestFilter
 ```
-At the top, here is the mocha explanation of ```--grep```
+Here is the mocha explanation of ```--grep```
 
-The --grep option when specified will trigger mocha to only run tests matching the given pattern which is internally compiled to a RegExp.
+The ```--grep``` option when specified will trigger mocha to only run tests matching the given pattern which is internally compiled to a RegExp.
 
 Suppose for example you have “api” related tests, as well as “app” related tests, as shown in the following snippet;
 One could use ```--grep api``` or ```--grep app``` to run one or the other.
