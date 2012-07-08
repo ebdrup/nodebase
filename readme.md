@@ -2,11 +2,12 @@ nodebase
 --------
 This is my boilerplate for when I start a new ```node.js``` project. I clone this repository and start from there.
 
-You put your code in the ```lib``` folder. I recommend an editor that you can configure to run JSHint for you
-while you are editing your JavaScript files. I use WebStorm.
-
 The main advantage of cloning this repository is that it comes with a working test-setup and runs JSHint as well
 as all the tests. This can be a pain to set up if you are new to node.
+Also there is a ready to go code coverage report (Windows only for now).
+
+You put your code in the ```lib``` folder. I recommend an editor that you can configure to run JSHint for you
+while you are editing your JavaScript files. I use WebStorm.
 
 Test setup
 ----------
@@ -52,7 +53,7 @@ You can specify specific files or directories for JSHint to ignore in the file `
 
 Running tests
 -------------
-After you do ```npm install``` you just run the command
+Use
 
 ```npm test```
 
@@ -62,7 +63,12 @@ In the Webstorm editor you can also set up a run configuration and point it at `
 
 Running a subset of tests
 -------------------------
-If you want to run a subset of tests, you can modify the file ```tests/mocha.opts``` and add the line
+If you want to run a subset of tests, you can run the command
+```
+node bin/runAllTests.js --grep myTestFilter
+```
+
+or modify the file ```tests/mocha.opts``` and add the line
 ```
 --grep myTestFilter
 ```
@@ -88,3 +94,13 @@ describe('app', function(){
   });
 });
 ```
+
+Running code coverage report
+----------------------------
+Use
+
+```npm run-script cov```
+
+to run get code coverage report for your tests (windows only for now).
+
+In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.
