@@ -1,20 +1,15 @@
 {
     "predef": [
         "sinon",
-        "request",
         "_",
-        "injectr",
-        "spyOn",
+        "requiremock",
         "it",
-        "console",
         "describe",
         "expect",
         "beforeEach",
         "before",
         "after",
-        "waits",
-        "waitsFor",
-        "runs"
+        "afterEach"
     ],
 
     "node" : true,

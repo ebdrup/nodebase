@@ -1,7 +1,7 @@
 {
 	"author":"Allan Ebdrup",
 	"name":"nodebase",
-	"version":"1.3.2",
+	"version":"1.3.3",
 	"repository":{
 		"type":"git",
 		"url":"https://github.com/Muscula/nodebase"
@@ -20,13 +20,13 @@
 		"cov":"node ./bin/runCoverage.js"
 	},
 	"devDependencies":{
-		"request":"",
 		"mocha":"",
 		"chai":"",
 		"sinon":"",
 		"sinon-chai":"",
 		"injectr":"",
 		"jshint":"",
-		"nodecoverage":">=0.3.1"
+		"nodecoverage":">=0.3.1",
+		"requiremock": ""
 	}
 }
