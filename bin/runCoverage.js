@@ -7,5 +7,5 @@ nodecoverage({
 	if(err){
 		console.error(err);
 	}
-	process.exit();
+	//process.exit();
 });
