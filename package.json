@@ -27,6 +27,6 @@
 		"sinon-chai":"",
 		"injectr":"",
 		"jshint":"",
-		"nodecoverage":">=0.2.2"
+		"nodecoverage":">=0.3.1"
 	}
 }

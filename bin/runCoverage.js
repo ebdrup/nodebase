@@ -2,8 +2,7 @@
 process.env.NODE_ENV = "coverage";
 var nodecoverage = require("nodecoverage");
 nodecoverage({
-	instrument:["lib"],
-	copy:["test"]
+	instrument:["lib"]
 }, function (err) {
 	if(err){
 		console.error(err);
