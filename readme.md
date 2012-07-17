@@ -2,14 +2,34 @@ nodebase
 --------
 This is my boilerplate for when I start a new ```node.js``` project. I clone this repository and start from there.
 
-The main advantage of cloning this repository is that it comes with a working test-setup and runs JSHint as well
-as all the tests. This can be a pain to set up if you are new to node.
-
-Also there is a ready to go code coverage report using my [nodecoverage](https://github.com/Muscula/nodecoverage)
-module (Windows only for now).
+The main advantage of cloning this repository is that it comes with a **working test-setup** and runs **JSHint** as well
+as all the tests. Also there is a ready to go **code coverage report** using my
+[nodecoverage](https://github.com/Muscula/nodecoverage) module *(Windows only for now)*.
 
 You put your code in the ```lib``` folder. I recommend an editor that you can configure to run JSHint for you
 while you are editing your JavaScript files. I use WebStorm.
+
+Running code coverage report
+----------------------------
+Use
+
+```npm run-script cov```
+
+to run get code coverage report for your tests (windows only for now).
+
+*In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.*
+
+
+Running tests
+-------------
+Use
+
+```npm test```
+
+to run all tests.
+
+*In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.*
+
 
 Test setup
 ----------
@@ -38,8 +58,7 @@ The following global variables are defined for testing:
 - ```expect``` for assertions
 - ```sinon``` for mocking and spies
 - ```_``` the JavaScript helper library underscore
-- ```injectr``` for mocking out ```require``` statements
-- ```request``` library for making HTTP requests to your API in integration tests
+- ```requiremock``` for mocking out ```require``` statements
 
 You can alter globals for testing in the file ```test/common.js```
 
@@ -52,16 +71,6 @@ You can add more directories in the ```bin/runTests.js``` file.
 You can specify what JSHint options to use in the file ```.jshintrc```
 
 You can specify specific files or directories for JSHint to ignore in the file ```.jshintignore```
-
-Running tests
--------------
-Use
-
-```npm test```
-
-to run all tests.
-
-In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.
 
 Running a subset of tests
 -------------------------
@@ -96,13 +105,3 @@ describe('app', function(){
   });
 });
 ```
-
-Running code coverage report
-----------------------------
-Use
-
-```npm run-script cov```
-
-to run get code coverage report for your tests (windows only for now).
-
-In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.
