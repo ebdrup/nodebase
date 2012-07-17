@@ -21,9 +21,11 @@ Running code coverage report
 ----------------------------
 Use
 
-```npm run-script cov```
+```
+npm run-script cov
+```
 
-to run get code coverage report for your tests (windows only for now).
+to run get code coverage report for your tests *(Windows only for now)*.
 
 *In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.*
 
@@ -32,7 +34,9 @@ Running tests
 -------------
 Use
 
-```npm test```
+```
+npm test
+```
 
 to run all tests.
 
