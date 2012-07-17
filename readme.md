@@ -4,7 +4,9 @@ This is my boilerplate for when I start a new ```node.js``` project. I clone thi
 
 The main advantage of cloning this repository is that it comes with a working test-setup and runs JSHint as well
 as all the tests. This can be a pain to set up if you are new to node.
-Also there is a ready to go code coverage report (Windows only for now).
+
+Also there is a ready to go code coverage report using my [nodecoverage](https://github.com/Muscula/nodecoverage)
+module (Windows only for now).
 
 You put your code in the ```lib``` folder. I recommend an editor that you can configure to run JSHint for you
 while you are editing your JavaScript files. I use WebStorm.
