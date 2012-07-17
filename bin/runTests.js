@@ -10,7 +10,7 @@ process.stderr.write = function (data){
 	fs.writeSync(2, data);
 };
 
-runJsHint(["./lib", "./test", "./bin"], function (err) {
+runJsHint(["lib", "test", "bin"], function (err) {
 	if (err) {
 		console.error("Exiting because of jsHint errors");
 		return process.exit(1);
@@ -25,16 +25,13 @@ function runMocha() {
 
 function runJsHint(pathsArray, callback) {
 	var jsHint = require("../node_modules/jshint/lib/hint.js");
-	var config = JSON.parse(fs.readFileSync(__dirname + "/../.jshintrc", "utf-8"));
+	var config = JSON.parse(fs.readFileSync(path.resolve(".jshintrc"), "utf-8"));
 	var reporter = require("../node_modules/jshint/lib/reporters/default.js").reporter;
-	var ignoreFile = __dirname + "/../.jshintignore";
-	var ignores = fs.readFileSync(ignoreFile, "utf8").split("\n")
+	var ignores = fs.readFileSync(path.resolve(".jshintignore"), "utf8").split("\n")
 		.filter(function (line) {
-			return !!line.trim();
+			return !!line.trim(); //remove empty lines
 		})
-		.map(function (line) {
-			return path.resolve(path.dirname(ignoreFile), line.trim());
-		});
+		.map(path.resolve);
 	var results = jsHint.hint(pathsArray, config, reporter, ignores);
 	if (results.length > 0) {
 		return callback(new Error("JSHintErrors"));
