@@ -20,7 +20,6 @@ runJsHint(["./lib", "./test", "./bin"], function (err) {
 });
 
 function runMocha() {
-
 	require('../node_modules/mocha/bin/_mocha');
 }
 
