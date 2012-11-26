@@ -3,8 +3,7 @@ nodebase
 This is my boilerplate for when I start a new ```node.js``` project. I copy this repository and start from there.
 
 The main advantage of copying this repository is that it comes with a **working test-setup** and runs **JSHint** as well
-as all the tests. Also there is a ready to go **code coverage report** using my
-[nodecoverage](https://github.com/Muscula/nodecoverage) module *(Windows only for now)*.
+as all the tests.
 
 You put your code in the ```lib``` folder. I recommend an editor that you can configure to run JSHint for you
 while you are editing your JavaScript files. I use WebStorm.
@@ -15,19 +14,6 @@ Once you've copied the files, ```cd``` to the ```nodebase``` directory and type
 ```
 npm install
 ```
-
-
-Running code coverage report
-----------------------------
-Use
-
-```
-npm run-script cov
-```
-
-to run get code coverage report for your tests *(Windows only for now)*.
-
-*In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.*
 
 
 Running tests
