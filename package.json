@@ -25,7 +25,6 @@
 		"sinon":"",
 		"sinon-chai":"",
 		"jshint":"",
-		"nodecoverage":">=0.6.3",
 		"requiremock": ""
 	}
 }
