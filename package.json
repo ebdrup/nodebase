@@ -24,7 +24,6 @@
 		"chai":"",
 		"sinon":"",
 		"sinon-chai":"",
-		"jshint":"",
-		"requiremock": ""
+		"jshint":"~0.9"
 	}
 }
