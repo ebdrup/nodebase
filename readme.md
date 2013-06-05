@@ -56,7 +56,6 @@ The following global variables are defined for testing:
 - ```expect``` for assertions
 - ```sinon``` for mocking and spies
 - ```_``` the JavaScript helper library underscore
-- ```requiremock``` for mocking out ```require``` statements
 
 You can alter globals for testing in the file ```test/common.js```
 
