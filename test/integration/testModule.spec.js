@@ -1,4 +1,3 @@
-"use strict";
 describe("When calling testModule", function () {
 	
 	var result;
