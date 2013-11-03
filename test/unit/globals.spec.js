@@ -1,4 +1,3 @@
-"use strict";
 describe("When running tests", function () {
 
 	it("should have sinon defined", function () {
