@@ -1,4 +1,3 @@
-"use strict";
 describe("When running app.js", function () {
 
 	it("runs without throwing an error", function () {
