@@ -9,7 +9,6 @@ describe("When calling testModule", function () {
 	});
 	
 	it("runs without throwing an error", function () {
-
 		expect(result).to.equal("testModule.js was tested");
 	});
 });
