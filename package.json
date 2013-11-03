@@ -12,7 +12,6 @@
 		"node":">=0.10.21"
 	},
 	"dependencies":{
-		"underscore":""
 	},
 	"scripts":{
 		"test":"node ./bin/runTests.js"
