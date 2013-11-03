@@ -1,32 +1,14 @@
-"use strict";
-var fs = require("fs");
-var path = require("path");
-
-runJsHint(["lib", "test", "bin"], function (err) {
-	if (err) {
+#!/usr/bin/env node
+var jsHint = require("../node_modules/jshint/src/cli.js");
+if (!jsHint.run({ args: ['.']})) {
+	return setTimeout(function () {
 		console.error("Exiting because of jsHint errors");
-		return process.exit(1);
-	}
-	console.log("No JSHint errors detected");
-	return runMocha();
-});
-
-function runMocha() {
-	require('../node_modules/mocha/bin/_mocha');
+		process.exit(1);
+	}, 1000);
 }
-
-function runJsHint(pathsArray, callback) {
-	var jsHint = require("../node_modules/jshint/lib/hint.js");
-	var config = JSON.parse(fs.readFileSync(path.resolve(".jshintrc"), "utf-8"));
-	var reporter = require("../node_modules/jshint/lib/reporters/default.js").reporter;
-	var ignores = fs.readFileSync(path.resolve(".jshintignore"), "utf8").split("\n")
-		.filter(function (line) {
-			return !!line.trim(); //remove empty lines
-		})
-		.map(path.resolve);
-	var results = jsHint.hint(pathsArray, config, reporter, ignores);
-	if (results.length > 0) {
-		return callback(new Error("JSHintErrors"));
-	}
-	return callback(null);
-}
+//run Mocha
+var realProcessExit = process.exit;
+process.exit = function (code) {
+	setTimeout(realProcessExit.bind(process, code), 2000);
+};
+require('../node_modules/mocha/bin/_mocha');
