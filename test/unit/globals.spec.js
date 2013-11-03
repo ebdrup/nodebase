@@ -8,9 +8,4 @@ describe("When running tests", function () {
 	it("should have expect defined", function () {
 		expect(expect).to.be.ok;
 	});
-
-	it("should have underscore defined", function () {
-		expect(_).to.be.ok;
-	});
-
 });
