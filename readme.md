@@ -1,11 +1,11 @@
 nodebase
 --------
-This is my boilerplate for when I start a new ```node.js``` project. I copy this repository and start from there.
+This is my boilerplate for when I start a new `node.js` project. I copy this repository and start from there.
 
 The main advantage of copying this repository is that it comes with a **working test-setup** and runs **JSHint** as well
 as all the tests.
 
-You put your code in the ```lib``` folder. I recommend an editor that you can configure to run JSHint for you
+You put your code in the `lib` folder. I recommend an editor that you can configure to run JSHint for you
 while you are editing your JavaScript files. I use WebStorm.
 
 Installation
@@ -26,15 +26,16 @@ npm test
 
 to run all tests.
 
-*In the Webstorm editor you can also set up a run configuration and point it at ```bin/runTests.js``` to run tests.*
+*In the Webstorm editor you can also set up a mocha run configuration and point it at the `test` folder.*
 
 
 Test setup
 ----------
-- ```mocha``` is the test framework
-- ```sinon``` is used for mocks and spies
-- ```chai``` is used for assertions
-- ```sinon-chai``` is used for better assertions of sinon
+- `mocha` is the test framework
+- `sinon` is used for mocks and spies
+- `chai` is used for assertions
+- `sinon-chai` is used for better assertions of sinon
+- `mocha-jshint` is used to run JSHint as a mocha test
 
 Test files
 ----------
@@ -53,27 +54,24 @@ file ```test/mocha.opts```
 Global variables when testing
 -----------------------------
 The following global variables are defined for testing:
-- ```expect``` for assertions
-- ```sinon``` for mocking and spies
-- ```_``` the JavaScript helper library underscore
+- `expect` for assertions
+- `sinon` for mocking and spies
 
-You can alter globals for testing in the file ```test/common.js```
+You can alter globals for testing in the file `test/common.js`
 
 JSHint
 ------
-JSHint is set up to verify all the JavaScript files in the folders ```lib```. ```bin``` and ```test```.
-
-You can add more directories in the ```bin/runTests.js``` file.
-
-You can specify what JSHint options to use in the file ```.jshintrc```
+JSHint is set up to verify all the JavaScript files except then ones in `node_modules`.
 
 You can specify specific files or directories for JSHint to ignore in the file ```.jshintignore```
+
+You can specify what JSHint options to use in the file ```.jshintrc```
 
 Running a subset of tests
 -------------------------
 If you want to run a subset of tests, you can run the command
 ```
-node bin/runAllTests.js --grep myTestFilter
+node test.js --grep myTestFilter
 ```
 
 or modify the file ```tests/mocha.opts``` and add the line
@@ -89,7 +87,7 @@ One could use ```--grep api``` or ```--grep app``` to run one or the other.
 The same goes for any other part of a suite or test-case title, ```--grep users``` would be valid as well,
 or even ```--grep GET```.
 
-```
+```js
 describe('api', function(){
   describe('GET /api/users', function(){
     it('respond with an array of users')
