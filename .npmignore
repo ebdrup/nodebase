@@ -1,5 +1,7 @@
 node_modules
 test
+.travis.yml
+test.js
 .gitignore
 .jshintignore
 .jshintrc
