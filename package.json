@@ -1,7 +1,7 @@
 {
   "author": "Allan Ebdrup",
   "name": "nodebase",
-  "version": "1.4.2",
+  "version": "1.5.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/Muscula/nodebase"
@@ -21,13 +21,6 @@
     "sinon": "",
     "sinon-chai": "",
     "mocha-jshint": ""
-  },
-  "description": "nodebase\r --------\r This is my boilerplate for when I start a new `node.js` project. I copy this repository and start from there.",
-  "bugs": {
-    "url": "https://github.com/Muscula/nodebase/issues"
-  },
-  "directories": {
-    "test": "test"
   },
   "keywords": [
     "boilerplate",
